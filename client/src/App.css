@@ -1,0 +1,437 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+li {
+  list-style-type: none;
+}
+/* body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+} */
+.container {
+  padding: 10px 80px;
+}
+
+/* home */
+
+.home {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  margin: 60px 0px;
+}
+.home .first {
+  padding-top: 90px;
+}
+.home .first h2 {
+  /* padding: 0px 20px; */
+  font-size: 2rem;
+  margin-bottom: 20px;
+  letter-spacing: 0.1rem;
+  color: rgb(255, 140, 0);
+  padding: 0px 25px 0px 0px;
+}
+.home .first p {
+  /* padding: 0px 20px; */
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  letter-spacing: 0.1rem;
+  padding: 0px 70px 0px 0px;
+}
+.home .first .btn {
+  color: black;
+  background-color: rgb(255, 140, 0);
+  margin-top: 10px;
+}
+
+.home .second .img2 {
+  margin-left: -90px;
+  margin-bottom: -60px;
+  /* display: flex; */
+  /* justify-content: center; */
+}
+
+@media (max-width: 1257px) {
+  .home {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    /* margin: 60px 0px; */
+  }
+  .home .second {
+    display: flex;
+    justify-content: center;
+  }
+  .home .first {
+    padding-top: 50px;
+  }
+}
+@media (max-width: 677px) {
+  .home .second {
+    display: none;
+  }
+  .home .first {
+    padding-top: 10px;
+  }
+}
+
+/* third section */
+.section {
+  background: url(../public/assets/hotel4.jpg);
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+.container .body {
+  width: 100%;
+  /* width: 50%; */
+  text-align: center;
+  padding: 8rem 40px;
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  line-height: 1.6rem;
+}
+.btn {
+  padding: 15px 30px;
+  margin: 40px 0px 10px 0px;
+  background: transparent;
+  outline: none;
+  border: 1px solid white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  letter-spacing: 0.1rem;
+  color: white;
+}
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+/* second section */
+
+.secondSection {
+  padding: 68px;
+  color: black;
+  /* text-align: center; */
+  background-color: rgb(236, 232, 232);
+  width: 100%;
+  /* margin-top: 10px; */
+  height: 100%;
+}
+.secondSection .para {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(255, 140, 0);
+}
+.secondSection .parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.secondSection .first {
+  text-align: center;
+  background-color: white;
+  padding: 40px 40px;
+  border-radius: 10px;
+  letter-spacing: 1px;
+}
+.secondSection .first h3 {
+  font-weight: 540;
+  font-size: 1.5rem;
+}
+.secondSection .first p {
+  color: rgb(102, 101, 101);
+  margin-top: 20px;
+}
+.secondSection h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+@media (max-width: 955px) {
+  .secondSection .parent {
+    grid-template-columns: 1fr;
+  }
+}
+/* register */
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 70px;
+  /* padding: 20px 0px; */
+}
+.form .first {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.form .first img {
+  width: 90%;
+  height: 90%;
+  margin-top: -40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 779px) {
+  .form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .form .first img {
+    margin-top: 10px;
+  }
+}
+.second {
+  /* width: 100%;
+  margin: 20px auto; */
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.second h2 {
+  padding: 0px 0px 30px 0px;
+}
+
+label {
+  display: block;
+  margin: 1rem 0 0.8rem 0;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 70%;
+  padding: 0.8rem 0.6rem;
+  outline: none;
+  font-size: 1rem;
+}
+input::placeholder {
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+}
+button {
+  margin-top: 2rem;
+  background-color: rgb(255, 140, 0);
+  padding: 10px 30px;
+  color: black;
+  letter-spacing: 0.1rem;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.extra {
+  padding: 20px 0px;
+}
+.extra p {
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  font-weight: 550;
+  display: inline;
+  margin-right: 5px;
+}
+.extra .sign {
+  color: rgb(0, 72, 255);
+}
+
+/* profile */
+.profile h2 {
+  position: relative;
+  /* Position relative to make ::after absolute positioning work correctly */
+  /* margin-bottom: 7rem; Adds space below the heading */
+}
+
+.profile h2::after {
+  content: "";
+  position: absolute; /* Absolute positioning relative to the h2 element */
+  left: 50%; /* Center horizontally */
+  bottom: -14px; /* Position below the h2 */
+  transform: translateX(-50%);
+  width: 100px; /* Line width */
+  height: 0.2rem; /* Line height */
+  background-color: black; /* Line color */
+  border-radius: 10px;
+}
+
+.profile {
+  width: 100%;
+  margin: 0 auto;
+}
+.profile h2 {
+  text-align: center;
+  margin: 30px 0px;
+}
+.details {
+  display: flex;
+  justify-content: center;
+}
+.details .update {
+  margin-top: 0px;
+}
+
+.error {
+  text-align: center;
+  margin: 70px;
+}
+
+/* admin section */
+
+.admin-users {
+  display: flex;
+  justify-content: center;
+}
+table {
+  text-align: center;
+  padding: 10px 0px 20px 0px;
+}
+td,
+th {
+  padding: 15px 30px;
+  border: 1px solid black;
+}
+.admin-users {
+  & button {
+    margin-top: 0.2rem;
+  }
+}
+.update a {
+  color: black;
+}
+/* users update form */
+.admin-form ul {
+  display: flex;
+  /* justify-content: center; */
+  padding: 30px 0px 10px 0px;
+  font-size: 1.1rem;
+}
+.admin-form ul li {
+  margin-right: 20px;
+}
+/*all bookings */
+
+.loading {
+  text-align: center;
+  margin-top: 70px;
+}
+
+/* hotels */
+.parent {
+  /* padding: 0px 20px; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+}
+
+.hotels {
+  padding: 20px 20px;
+}
+.hotels img {
+  border-radius: 30px;
+}
+.text {
+  margin-top: 20px;
+  /* padding: 0px 20px; */
+  width: 80%;
+  /* text-align: center; */
+}
+.text p {
+  margin: 10px 0px;
+}
+.text button {
+  margin-top: 20px;
+}
+@media (max-width: 1342px) {
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+  }
+}
+@media (max-width: 988px) {
+  .parent {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+  }
+}
+
+/* searchHotel */
+
+.searchForm {
+  width: 50%;
+  margin: 10px auto 30px auto;
+}
+.searchForm input {
+  border-radius: 7px;
+  margin-top: 10px;
+}
+.searchForm button {
+  border-radius: 7px;
+  margin-left: 10px;
+  background-color: rgb(249, 147, 22);
+  margin-top: 10px;
+  padding: 10px 20px;
+}
+.searchForm form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.searchForm form label {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-top: 30px;
+}
+/* admin */
+
+.admin h2 {
+  text-align: center;
+}
+/* addmin hotel */
+.add {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+/* error page */
+.error h1 {
+  margin-bottom: 25px;
+  letter-spacing: 0.1rem;
+  font-size: 3.6em;
+}
+.error h2 {
+  margin-bottom: 25px;
+  letter-spacing: 0.1rem;
+  font-size: 2.7rem;
+}
+.error p {
+  letter-spacing: 0.1rem;
+  font-size: 1.1rem;
+}
+.error .btn {
+  color: black;
+  background-color: rgb(255, 140, 0);
+  margin-top: 30px;
+}
