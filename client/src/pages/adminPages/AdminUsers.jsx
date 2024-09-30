@@ -6,10 +6,11 @@ import { toast } from "react-toastify";
 const AdminUsers = () => {
   const { authorizationToken } = useAuth();
   const [allUsers, setAllUsers] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const getAllUsersData = async () => {
+      setLoading(true);
       // Move inside useEffect
       try {
         const response = await axios.get(
@@ -22,10 +23,10 @@ const AdminUsers = () => {
         );
         const data = response.data;
         setAllUsers(data);
-        setLoading(false);
-        // console.log("userdata", data);
       } catch (error) {
         console.log(error);
+      } finally {
+        setLoading(false);
       }
     };
 

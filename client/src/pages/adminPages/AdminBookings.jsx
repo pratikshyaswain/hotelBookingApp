@@ -6,10 +6,12 @@ import { useAuth } from "../../store/auth";
 const AdminBookings = () => {
   const { authorizationToken } = useAuth();
   const [allBookings, setAllBookings] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const getAllUsersData = async () => {
+      setLoading(true);
+
       // Move inside useEffect
       try {
         const response = await axios.get(
@@ -22,10 +24,10 @@ const AdminBookings = () => {
         );
         const data = response.data;
         setAllBookings(data);
-        setLoading(false);
-        // console.log("userdata", data);
       } catch (error) {
         console.log(error);
+      } finally {
+        setLoading(false); // Ensure loading is false in both success and error cases
       }
     };
 

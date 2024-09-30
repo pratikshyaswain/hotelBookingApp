@@ -6,10 +6,11 @@ import { Link } from "react-router-dom";
 const AdminHotels = () => {
   const { authorizationToken } = useAuth();
   const [allHotels, setAllHotels] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const getAllhotelsData = async () => {
+      setLoading(true);
       // Move inside useEffect
       try {
         const response = await axios.get(
@@ -20,12 +21,14 @@ const AdminHotels = () => {
             },
           }
         );
+        // setLoading(true);
         const data = response.data;
         setAllHotels(data);
-        setLoading(false);
         // console.log("hotels", data);
       } catch (error) {
         console.log(error);
+      } finally {
+        setLoading(false); // Ensure loading is false in both success and error cases
       }
     };
 
